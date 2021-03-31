@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TopBar() {
   return (
-    <div className="flex justify-evenly  w-screen h-16 p-3">
+    <div className="flex justify-evenly md:justify-end md:space-x-16 w-screen h-16 p-3 bg-blue-500">
       <a
         href="mailto:lesupoort24@gmail.com"
         id="email"
@@ -10,10 +10,17 @@ export default function TopBar() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          fill="#FFFFFF"
           viewBox="0 0 24 24"
+          stroke="currentColor"
           className="w-6 h-6"
         >
-          <path d="M21.75 3H2.25A2.25 2.25 0 000 5.25v13.5A2.25 2.25 0 002.25 21h19.5A2.25 2.25 0 0024 18.75V5.25A2.25 2.25 0 0021.75 3zm0 1.5c.102 0 .2.02.29.059L12 13.258l-10.04-8.7a.722.722 0 01.29-.058zm0 15H2.25a.75.75 0 01-.75-.75V6.145l10.008 8.671a.755.755 0 00.984 0L22.5 6.145V18.75a.75.75 0 01-.75.75zm0 0"></path>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
         </svg>
         <p className="hidden sm:block">lesupoort24@gmail.com</p>
       </a>
@@ -21,7 +28,7 @@ export default function TopBar() {
       <a href="tel:+9055376498" id="phone" className="flex space-x-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fill="#FFFFFF"
           viewBox="0 0 24 24"
           stroke="currentColor"
           className="w-6 h-6"
@@ -35,7 +42,7 @@ export default function TopBar() {
         </svg>
         <p className="hidden sm:block">+905526766088</p>
       </a>
-      <div id="fr">
+      <a href="#" id="fr">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -56,8 +63,8 @@ export default function TopBar() {
             ></path>
           </g>
         </svg>{" "}
-      </div>
-      <div id="uk">
+      </a>
+      <a href="#" id="uk">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -82,7 +89,7 @@ export default function TopBar() {
             ></path>
           </g>
         </svg>
-      </div>
+      </a>
     </div>
   );
 }
