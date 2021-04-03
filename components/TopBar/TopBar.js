@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TopBar() {
   return (
-    <div className="flex justify-evenly md:justify-end md:space-x-16 w-screen h-16 p-3 bg-blue-500">
+    <div className="flex  text-white justify-evenly items-center md:justify-end md:space-x-16 h-16 space-x-10">
       <a
         href="mailto:lesupoort24@gmail.com"
         id="email"
@@ -11,84 +11,48 @@ export default function TopBar() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="#FFFFFF"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          fillRule="evenodd"
+          clipRule="evenodd"
+          imageRendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+          viewBox="0 0 58.09 45.63"
           className="w-6 h-6"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
+          <path d="M54.08 37.24c0 2.41-1.96 4.38-4.38 4.38H8.39c-2.41 0-4.38-1.96-4.38-4.38V8.38c0-.59.12-1.15.33-1.66l17.48 19.83a9.658 9.658 0 007.23 3.27c2.77 0 5.4-1.19 7.23-3.27L53.75 6.72c.21.51.33 1.07.33 1.66v28.86zM49.7 4c.34 0 .67.04 1 .12L33.27 23.9a5.646 5.646 0 01-4.22 1.91c-1.62 0-3.15-.7-4.22-1.91L7.4 4.12c.32-.07.65-.12 1-.12h41.31zm0-4.01H8.39C3.77-.01 0 3.75 0 8.37v28.86c0 4.62 3.76 8.39 8.39 8.39H49.7c4.62 0 8.39-3.76 8.39-8.39V8.37c0-4.62-3.76-8.38-8.39-8.38z"></path>
         </svg>
         <p className="hidden sm:block">lesupoort24@gmail.com</p>
       </a>
 
-      <a href="tel:+9055376498" id="phone" className="flex space-x-2">
+      <a
+        href="https://wa.me/9055376498"
+        target="_blank"
+        id="phone"
+        className="flex space-x-2"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#FFFFFF"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          imageRendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+          viewBox="0 0 94.86 95.09"
           className="w-6 h-6"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-          />
+          <g>
+            <path
+              d="M26.84 78.71l1.61.96c5.91 3.52 12.63 5.38 19.44 5.38 21 0 38.09-17.09 38.09-38.09 0-21-17.09-38.09-38.09-38.09-21 0-38.09 17.09-38.09 38.09 0 6.93 1.93 13.76 5.57 19.75l.99 1.62-3.81 14.2 14.29-3.83zM0 95.09l6.82-25.43C2.96 62.69.93 54.89.93 46.97.93 21.08 22 0 47.9 0s46.97 21.07 46.97 46.97S73.8 93.94 47.9 93.94c-7.77 0-15.45-1.96-22.32-5.69L.01 95.1z"
+              className="fil0"
+            ></path>
+            <path
+              d="M65.36 53.5c-1.93-1.16-4.45-2.45-6.73-1.52-1.74.72-2.86 3.45-3.99 4.85-.58.72-1.27.83-2.17.47-6.56-2.61-11.58-6.99-15.2-13.02-.61-.94-.5-1.68.24-2.55 1.09-1.29 2.47-2.75 2.76-4.48.3-1.73-.52-3.76-1.24-5.31-.92-1.97-1.94-4.79-3.92-5.91-1.82-1.03-4.21-.45-5.83.87-2.8 2.28-4.14 5.84-4.1 9.38.01 1.01.13 2.01.37 2.98.56 2.33 1.64 4.51 2.86 6.58.91 1.56 1.91 3.08 2.98 4.53 3.51 4.77 7.87 8.91 12.92 12 2.52 1.55 5.24 2.9 8.06 3.83 3.16 1.04 5.97 2.13 9.38 1.48 3.57-.68 7.09-2.89 8.51-6.33.42-1.02.63-2.16.4-3.23-.49-2.23-3.5-3.55-5.3-4.62z"
+              className="fil1"
+            ></path>
+          </g>
         </svg>
         <p className="hidden sm:block">+905526766088</p>
-      </a>
-      <a href="#" id="fr">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          className="w-6 h-6"
-        >
-          <g>
-            <path
-              fill="#FFFFFF"
-              d="M24 12c0 6.629-5.371 12-12 12S0 18.629 0 12 5.371 0 12 0s12 5.371 12 12zm0 0"
-            ></path>
-            <path
-              fill="#D80027"
-              d="M24 12c0-5.16-3.258-9.559-7.824-11.254v22.508C20.742 21.559 24 17.16 24 12zm0 0"
-            ></path>
-            <path
-              fill="#0052B4"
-              d="M0 12c0 5.16 3.258 9.559 7.824 11.254V.746C3.258 2.441 0 6.84 0 12zm0 0"
-            ></path>
-          </g>
-        </svg>{" "}
-      </a>
-      <a href="#" id="uk">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          className="w-6 h-6"
-        >
-          <g>
-            <path
-              fill="#FFFFFF"
-              d="M24 12c0 6.629-5.371 12-12 12S0 18.629 0 12 5.371 0 12 0s12 5.371 12 12zm0 0"
-            ></path>
-            <path
-              fill="#0052B4"
-              d="M2.48 4.695A11.985 11.985 0 00.414 8.871h6.242zm0 0M23.586 8.871a11.985 11.985 0 00-2.066-4.176l-4.176 4.176zm0 0M.414 15.129a11.952 11.952 0 002.066 4.176l4.176-4.176zm0 0M19.305 2.48A11.985 11.985 0 0015.129.414v6.242zm0 0M4.695 21.52a11.985 11.985 0 004.176 2.066v-6.242zm0 0M8.871.414A11.985 11.985 0 004.695 2.48l4.176 4.176zm0 0M15.129 23.586a11.985 11.985 0 004.176-2.066l-4.176-4.176zm0 0M17.344 15.129l4.176 4.176a11.952 11.952 0 002.066-4.176zm0 0"
-            ></path>
-            <path
-              fill="#D80027"
-              d="M23.898 10.434H13.566V.102a12.174 12.174 0 00-3.132 0v10.332H.102a12.174 12.174 0 000 3.132h10.332v10.332a12.174 12.174 0 003.132 0V13.566h10.332a12.174 12.174 0 000-3.132zm0 0"
-            ></path>
-            <path
-              fill="#D80027"
-              d="M15.129 15.129l5.355 5.355c.246-.246.48-.504.707-.77l-4.586-4.585zm0 0M8.871 15.129l-5.355 5.355c.246.246.504.48.77.707l4.585-4.586zm0 0M8.871 8.871L3.516 3.516c-.246.246-.48.504-.707.77L7.395 8.87zm0 0M15.129 8.871l5.355-5.355c-.246-.246-.504-.48-.77-.707L15.13 7.395zm0 0"
-            ></path>
-          </g>
-        </svg>
       </a>
     </div>
   );
