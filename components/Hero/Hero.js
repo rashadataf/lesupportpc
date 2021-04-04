@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div
-      className="flex p-2 items-center w-screen md:h-96 justify-between"
+      className="flex p-2 items-center md:w-full md:h-screen justify-between"
       style={{
         background:
           "linear-gradient(to bottom,#3b82f6bb,#3b82f6bb),url(/background.jpg) no-repeat center center/cover",
@@ -20,7 +20,7 @@ export default function Hero() {
           With only the name brands you trust.
         </h3>
       </div>
-      <div className="w-5/12 md:w-3/12">
+      <div className="w-5/12 md:w-5/12">
         <Image
           src="/hero.png"
           alt="Hero Image"

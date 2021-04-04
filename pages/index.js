@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 import NavBar from "../components/NavBar/NavBar";
+import AboutUs from "../components/Sections/AboutUs";
 import TopBar from "../components/TopBar/TopBar";
 
 export default function Home() {
@@ -10,9 +11,9 @@ export default function Home() {
         <title>Le Support PC</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      {/* <TopBar /> */}
       <NavBar />
       <Hero />
+      <AboutUs />
     </div>
   );
 }
