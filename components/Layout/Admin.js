@@ -12,10 +12,10 @@ function AdminLayout(props) {
     });
   });
   return (
-    <div className="grid grid-cols-1 grid-rows-2">
-      <div className="bg-gray-800 w-screen flex flex-wrap items-center justify-between p-2 sm:pb-0">
+    <div className="w-full">
+      <div className="bg-gray-800 w-full flex flex-wrap items-center justify-between p-4 sm:pb-0 max-h-28">
         <Link href="/admin/dashboard">
-          <a className="text-gray-100 text-base xl:text-xl no-underline hover:no-underline font-bold flex sm:w-1/3">
+          <a className="text-gray-100 text-base xl:text-xl no-underline hover:no-underline font-bold flex w-1/3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -56,7 +56,7 @@ function AdminLayout(props) {
             />
           </svg>
         </a>
-        <nav className="bg-gray-800 w-screen sm:w-2/3 mt-1">
+        <nav className="bg-gray-800 w-full sm:w-2/3 mt-1">
           <ul
             className={`text-white transition-all duration-700 ease-out sm:max-h-40 w-full flex flex-col sm:flex-row sm:justify-end md:space-x-8 overflow-hidden items-end ${
               open ? "max-h-96" : "max-h-0"
@@ -98,7 +98,7 @@ function AdminLayout(props) {
           </ul>
         </nav>
       </div>
-      <div className="p-2">{props.children}</div>
+      <div className="p-4 mt-5 w-full">{props.children}</div>
     </div>
   );
 }
