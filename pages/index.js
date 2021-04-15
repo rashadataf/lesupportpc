@@ -4,7 +4,9 @@ import NavBar from "../components/NavBar/NavBar";
 import AboutUs from "../components/Sections/AboutUs";
 import TopBar from "../components/TopBar/TopBar";
 
-export default function Home() {
+import axios from "axios";
+
+export default function Home({ aboutUs }) {
   return (
     <div>
       <Head>
@@ -13,7 +15,22 @@ export default function Home() {
       </Head>
       <NavBar />
       <Hero />
-      <AboutUs />
+      <AboutUs aboutUs={aboutUs} />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const result = await axios.get("http://localhost:3000/api/admin/about-us");
+  const data = await result.data;
+  if (data.length > 0)
+    return {
+      props: {
+        aboutUs: data[0],
+      },
+    };
+
+  return {
+    props: {},
+  };
 }

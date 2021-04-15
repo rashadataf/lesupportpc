@@ -98,7 +98,7 @@ function AdminLayout(props) {
           </ul>
         </nav>
       </div>
-      <div className="p-4 mt-5 w-full">{props.children}</div>
+      <div className="p-4 w-full bg-gray-200 min-h-screen">{props.children}</div>
     </div>
   );
 }

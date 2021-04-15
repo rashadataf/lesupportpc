@@ -1,17 +1,31 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
-export default function AdminHome() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+import AdminServices from "../../services/admin.services";
+
+export default function AdminHome(props) {
+  const router = useRouter();
+  const [title, setTitle] = useState(props.aboutUs ? props.aboutUs.title : "");
+  const [titleError, setTitleError] = useState("");
+  const [content, setContent] = useState(
+    props.aboutUs ? props.aboutUs.content : ""
+  );
+  const [contentError, setContentError] = useState("");
   const [image, setImage] = useState("");
-  const [imagePreview, setImagePreview] = useState("");
+  const [imagePreview, setImagePreview] = useState(
+    props.aboutUs && props.aboutUs.imageUrl
+      ? props.aboutUs.imageUrl.split("public").pop()
+      : ""
+  );
 
   function handleTitle(event) {
+    setTitleError("");
     setTitle(event.target.value);
   }
 
   function handleContent(event) {
+    setContentError("");
     setContent(event.target.value);
   }
 
@@ -25,6 +39,39 @@ export default function AdminHome() {
     }
   }
 
+  function validateInput() {
+    let isValid = true;
+    if (title.length === 0) {
+      isValid = false;
+      setTitleError("title can't be empty!");
+    }
+    if (content.length === 0) {
+      isValid = false;
+      setContentError("content can't be empty!");
+    }
+    return isValid;
+  }
+
+  async function handleSave() {
+    if (validateInput()) {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("content", content);
+      formData.append("image", image);
+
+      const result = await AdminServices.aboutUsServices.postAboutUs(formData);
+      if (result) {
+        router.reload();
+        // setTitle("");
+        // setContent("");
+        // setImage("");
+        // setImagePreview("");
+        // setTitleError("");
+        // setContentError("");
+      }
+    }
+  }
+
   return (
     <div className="w-full">
       <div>
@@ -35,6 +82,7 @@ export default function AdminHome() {
           onChange={handleTitle}
           className="p-3 bg-white rounded border-0 shadow outline-none focus:ring w-full"
         />
+        {titleError && <p className="bg-red-300 p-3">{titleError}</p>}
       </div>
       <div className="mt-6">
         <textarea
@@ -44,6 +92,7 @@ export default function AdminHome() {
           onChange={handleContent}
           className="p-3 bg-white rounded border-0 shadow outline-none focus:ring w-full pr-10"
         ></textarea>
+        {contentError && <p className="bg-red-300 p-3">{contentError}</p>}
       </div>
       <div className="flex w-full bg-grey-lighter mt-6">
         <div className="flex flex-col w-full max-w-sm justify-between">
@@ -98,10 +147,7 @@ export default function AdminHome() {
       <div className="w-56">
         <button
           className="flex mt-10 font-bold px-4 py-4 items-center rounded-lg shadow-lg bg-green-400 hover:bg-green-600 hover:text-white"
-          onClick={() => {
-            setImagePreview("");
-            setImage("");
-          }}
+          onClick={handleSave}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

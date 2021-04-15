@@ -1,27 +1,38 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-export default function AboutUs() {
+import AdminServices from "../../services/admin.services";
+
+export default function AboutUs(props) {
+  // const [aboutUs, setAboutUs] = useState();
+  // useEffect(() => {
+  //   async function getAboutUsData() {
+  //     const result = await AdminServices.aboutUsServices.getAboutUs();
+  //     setAboutUs(result[0]);
+  //   }
+  //   getAboutUsData();
+  // });
   return (
     <div className="space-y-6 md:space-y-14 md:px-6 md:py-20">
       <div className="space-y-3 md:flex">
         <div className="relative w-full h-48 sm:h-64 md:w-1/2 md:h-96">
           <Image
             alt="Mountains"
-            src="/img_1.jpg"
+            src={
+              props.aboutUs && props.aboutUs.imageUrl
+                ? `/${props.aboutUs.imageUrl.split("public/").pop()}`
+                : "/img_1.jpg"
+            }
             layout="fill"
             objectFit="fill"
           />
         </div>
         <div className="p-3 text-center space-y-3 md:w-1/2 md:leading-10 md:space-y-7">
           <h2 className="font-bold text-2xl text-gray-900 md:leading-10">
-            We provide the latest software you need for your home, your business
-            and your protection.{" "}
+            {props.aboutUs ? props.aboutUs.title : ""}
           </h2>
           <p className="text-gray-700">
-            We've built a company with the sole focus of making sure our
-            customer service is the absolute best in the industry. You'll have
-            peace of mind knowing that our award winning team is available
-            whenever you need us.{" "}
+            {props.aboutUs ? props.aboutUs.content : ""}
           </p>
         </div>
       </div>
