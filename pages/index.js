@@ -7,6 +7,7 @@ import TopBar from "../components/TopBar/TopBar";
 import axios from "axios";
 import SoftwarePurchase from "../components/Sections/SoftwarePurchase";
 import Services from "../components/Sections/Services";
+import PopularSoftware from "../components/Sections/PopularSoftware";
 
 export default function Home({ aboutUs }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ aboutUs }) {
       <AboutUs aboutUs={aboutUs} />
       <SoftwarePurchase />
       <Services />
+      <PopularSoftware />
     </div>
   );
 }
