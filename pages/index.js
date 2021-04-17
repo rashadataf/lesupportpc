@@ -5,6 +5,7 @@ import AboutUs from "../components/Sections/AboutUs";
 import TopBar from "../components/TopBar/TopBar";
 
 import axios from "axios";
+import SoftwarePurchase from "../components/Sections/SoftwarePurchase";
 
 export default function Home({ aboutUs }) {
   return (
@@ -16,6 +17,7 @@ export default function Home({ aboutUs }) {
       <NavBar />
       <Hero />
       <AboutUs aboutUs={aboutUs} />
+      <SoftwarePurchase />
     </div>
   );
 }

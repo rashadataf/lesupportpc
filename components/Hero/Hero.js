@@ -9,14 +9,14 @@ export default function Hero() {
           "linear-gradient(to bottom,#3b82f6bb,#3b82f6bb),url(/background.jpg) no-repeat center center/cover",
       }}
     >
-      <div className="w-7/12 md:w-5/12 text-center text-white">
-        <h3 className="text-xs md:text-sm">Welcome to Depannage Ordi</h3>
+      <div className="w-7/12 md:w-5/12 text-center text-white -mt-9">
+        <h3 className="text-xs md:text-2xl">Welcome to Depannage Ordi</h3>
         <hr className="m-4" />
-        <h1 className="text-sm md:text-base font-bold">
+        <h1 className="text-sm md:text-4xl font-bold">
           Only the best software for home & business
         </h1>
         <hr className="m-4" />
-        <h3 className="text-xs md:text-sm">
+        <h3 className="text-xs md:text-2xl">
           With only the name brands you trust.
         </h3>
       </div>
