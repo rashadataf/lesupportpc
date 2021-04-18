@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SiteInfo() {
   return (
@@ -12,7 +13,7 @@ export default function SiteInfo() {
           layout="responsive"
         />
       </div>
-      <hr className="my-4 hidden" />
+      <hr className="my-4 lg:hidden" />
       <div>
         <h2 className="text-lg text-gray-700 font-bold uppercase my-4">
           Site Links
@@ -25,14 +26,16 @@ export default function SiteInfo() {
             <a href="#popular-software">Services</a>
           </li>
           <li className="text-gray-500">
-            <a>Privacy Policy</a>
+            <Link href="/terms">
+              <a>Privacy Policy</a>
+            </Link>
           </li>
           <li className="text-gray-500">
-            <a>Terms and Conditions</a>
+            <a href="/terms">Terms and Conditions</a>
           </li>
         </ul>
       </div>
-      <hr className="my-4 hidden" />
+      <hr className="my-4 lg:hidden" />
       <div>
         <h2 className="text-lg text-gray-700 font-bold uppercase my-4">
           Visit Us
@@ -43,7 +46,7 @@ export default function SiteInfo() {
           <li className="text-gray-500">Belgium</li>
         </ul>
       </div>
-      <hr className="my-4 hidden" />
+      <hr className="my-4 lg:hidden" />
       <div>
         <h2 className="text-lg text-gray-700 font-bold uppercase my-4">
           Talk With Us
