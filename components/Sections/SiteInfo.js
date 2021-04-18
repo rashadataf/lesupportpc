@@ -26,9 +26,7 @@ export default function SiteInfo() {
             <a href="#popular-software">Services</a>
           </li>
           <li className="text-gray-500">
-            <Link href="/terms">
-              <a>Privacy Policy</a>
-            </Link>
+            <a href="/privacy">Privacy Policy</a>
           </li>
           <li className="text-gray-500">
             <a href="/terms">Terms and Conditions</a>
