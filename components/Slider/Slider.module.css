@@ -1,0 +1,99 @@
+.MobileSlider {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  padding: 20px;
+  background: linear-gradient(to bottom, #000000f1, #000000f1),
+    url("/bg2.jpg") repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MobileSlide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.6s ease;
+  transform: translate(-100%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MobileSlide div {
+  width: 90%;
+  height: 70%;
+  margin-top: 4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.MobileSlide div p {
+  font-size: 1rem;
+  max-width: 80%;
+}
+
+.MobileSlide div h3 {
+  margin-top: 1rem;
+}
+
+.MobileSlide div button {
+  margin-top: 1rem;
+  width: auto;
+  height: 42px;
+  line-height: 42px;
+  background: #00c99c;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 20px 0 20px;
+}
+
+.MobileSlide.active {
+  transform: translate(0, 0);
+}
+
+.MobileSlide.active ~ .MobileSlide {
+  transform: translate(100%, 0);
+}
+
+@media screen and (max-height: 350px) {
+  .MobileSlider {
+    height: 300px !important;
+  }
+
+  .MobileSlide div {
+    width: 50%;
+    height: 80%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .MobileSlider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    padding: 20px;
+    background: linear-gradient(to bottom, #000000f1, #000000f1),
+      url("/bg2.jpg") repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .MobileSlide div p {
+    font-size: 1rem;
+    max-width: 40%;
+  }
+}

@@ -9,6 +9,8 @@ import SoftwarePurchase from "../components/Sections/SoftwarePurchase";
 import Services from "../components/Sections/Services";
 import PopularSoftware from "../components/Sections/PopularSoftware";
 import PaymentLogo from "../components/Sections/PaymentLogo";
+import Slider from "../components/Slider/Slider";
+import HappyCustomers from "../components/Sections/HappyCustomers";
 
 export default function Home({ aboutUs }) {
   return (
@@ -24,6 +26,7 @@ export default function Home({ aboutUs }) {
       <Services />
       <PopularSoftware />
       <PaymentLogo />
+      <HappyCustomers />
     </div>
   );
 }
