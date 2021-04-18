@@ -12,7 +12,7 @@ import HappyCustomers from "../components/Sections/HappyCustomers";
 import SiteInfo from "../components/Sections/SiteInfo";
 import CopyRights from "../components/Sections/CopyRights";
 
-export default function Home({ aboutUs }) {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -21,7 +21,7 @@ export default function Home({ aboutUs }) {
       </Head>
       <NavBar />
       <Hero />
-      <AboutUs aboutUs={aboutUs} />
+      <AboutUs />
       <SoftwarePurchase />
       <Services />
       <PopularSoftware />
@@ -33,17 +33,17 @@ export default function Home({ aboutUs }) {
   );
 }
 
-export async function getServerSideProps(context) {
-  const result = await axios.get("http://localhost:3000/api/admin/about-us");
-  const data = await result.data;
-  if (data.length > 0)
-    return {
-      props: {
-        aboutUs: data[0],
-      },
-    };
+// export async function getServerSideProps(context) {
+//   const result = await axios.get("http://localhost:3000/api/admin/about-us");
+//   const data = await result.data;
+//   if (data.length > 0)
+//     return {
+//       props: {
+//         aboutUs: data[0],
+//       },
+//     };
 
-  return {
-    props: {},
-  };
-}
+//   return {
+//     props: {},
+//   };
+// }

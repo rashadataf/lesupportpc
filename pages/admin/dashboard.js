@@ -11,17 +11,17 @@ export default function AdminIndex({ aboutUs }) {
   );
 }
 
-export async function getServerSideProps(context) {
-  const result = await axios.get("http://localhost:3000/api/admin/about-us");
-  const data = await result.data;
-  if (data.length > 0)
-    return {
-      props: {
-        aboutUs: data[0],
-      },
-    };
+// export async function getServerSideProps(context) {
+//   const result = await axios.get("http://localhost:3000/api/admin/about-us");
+//   const data = await result.data;
+//   if (data.length > 0)
+//     return {
+//       props: {
+//         aboutUs: data[0],
+//       },
+//     };
 
-  return {
-    props: {},
-  };
-}
+//   return {
+//     props: {},
+//   };
+// }

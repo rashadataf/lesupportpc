@@ -29,10 +29,14 @@ export default function AboutUs(props) {
         </div>
         <div className="p-3 text-center space-y-3 md:w-1/2 md:leading-10 md:space-y-7">
           <h2 className="font-bold text-2xl text-gray-900 md:leading-10">
-            {props.aboutUs ? props.aboutUs.title : ""}
+            {props.aboutUs
+              ? props.aboutUs.title
+              : "We provide the latest software you need for your home, your business and your protection. "}
           </h2>
           <p className="text-gray-700">
-            {props.aboutUs ? props.aboutUs.content : ""}
+            {props.aboutUs
+              ? props.aboutUs.content
+              : " We've built a company with the sole focus of making sure our customer service is the absolute best in the industry. You'll have peace of mind knowing that our award winning team is available whenever you need us. "}
           </p>
         </div>
       </div>
