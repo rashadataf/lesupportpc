@@ -3,7 +3,7 @@ import ProgramsCollection from "../ProgramsCollection/ProgramsCollection";
 
 export default function PopularSoftware() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" id="popular-software">
       <h2 className="text-center text-3xl font-light text-gray-600 mt-8">
         Our Most Popular Software
       </h2>

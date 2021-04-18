@@ -50,13 +50,13 @@ export default function NavBar() {
             Home
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            About Us
+            <a href="#about-us">About Us</a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            Services
+            <a href="#popular-software">Services</a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            Happy Customers
+            <a href="#happy-customers">Happy Customers</a>
           </li>
           <li className="text-lg flex space-x-4 md:space-x-3 bg-blue-600 cursor-pointer text-right md:text-center p-3">
             <a href="#" id="fr">

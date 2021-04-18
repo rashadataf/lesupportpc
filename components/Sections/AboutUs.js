@@ -13,7 +13,7 @@ export default function AboutUs(props) {
   //   getAboutUsData();
   // });
   return (
-    <div className="space-y-6 md:space-y-14 md:px-6 md:py-20">
+    <div className="space-y-6 md:space-y-14 md:px-6 md:py-20" id="about-us">
       <div className="space-y-3 md:flex">
         <div className="relative w-full h-48 sm:h-64 md:w-1/2 md:h-96">
           <Image

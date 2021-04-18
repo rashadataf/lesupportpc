@@ -1,6 +1,6 @@
 export default function SoftwarePurchase() {
   return (
-    <div className="text-center mt-14 bg-green-400 py-6 px-6 text-white">
+    <div className="text-center mt-14 bg-green-400 py-6 px-6 text-white" id="software-purchase">
       {/* header */}
       <div>
         <h2 className="text-3xl">Software Purchasing Help</h2>

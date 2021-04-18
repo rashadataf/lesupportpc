@@ -2,7 +2,6 @@ import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 import NavBar from "../components/NavBar/NavBar";
 import AboutUs from "../components/Sections/AboutUs";
-import TopBar from "../components/TopBar/TopBar";
 
 import axios from "axios";
 import SoftwarePurchase from "../components/Sections/SoftwarePurchase";
@@ -11,6 +10,7 @@ import PopularSoftware from "../components/Sections/PopularSoftware";
 import PaymentLogo from "../components/Sections/PaymentLogo";
 import Slider from "../components/Slider/Slider";
 import HappyCustomers from "../components/Sections/HappyCustomers";
+import SiteInfo from "../components/Sections/SiteInfo";
 
 export default function Home({ aboutUs }) {
   return (
@@ -27,6 +27,7 @@ export default function Home({ aboutUs }) {
       <PopularSoftware />
       <PaymentLogo />
       <HappyCustomers />
+      <SiteInfo />
     </div>
   );
 }
