@@ -1,4 +1,13 @@
+import { useRouter } from "next/router";
+
+import en from "../../locales/en";
+import fr from "../../locales/fr";
+
 export default function Services() {
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "en" ? en : fr;
+
   return (
     <div className="bg-blue-600 flex flex-col items-center py-3">
       {/* image */}
@@ -7,15 +16,18 @@ export default function Services() {
       </div>
       {/* Content */}
       <div className="mt-10 text-center text-white">
-        <h2 className="text-3xl lg:text-5xl">Protect Your Digital Life</h2>
+        <h2 className="text-3xl lg:text-5xl">{language.showCase.title}</h2>
         <h3 className="mt-6 leading-relaxed lg:text-xl">
-          Keep your data safe with our award winning antivirus titles and backup
-          services. <br />
-          We will help you choose the best software strategy for protecting all
-          of your important files.{" "}
+          {language.showCase.content.split(".").map((secm, i) => {
+            return (
+              <span key={i}>
+                {secm} <br key={(i + 1) * 999} />
+              </span>
+            );
+          })}
         </h3>
         <button className="mt-8 border rounded-full py-3 px-6 border-white">
-          Get Started Now
+          {language.showCase.button}
         </button>
       </div>
     </div>

@@ -1,10 +1,17 @@
+import { useRouter } from "next/router";
+
+import en from "../../locales/en";
+import fr from "../../locales/fr";
 import Slider from "../Slider/Slider";
 
 export default function HappyCustomers() {
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "en" ? en : fr;
   return (
     <div className="relative mt-10" id="happy-customers">
       <h2 className="absolute left-2/4 top-8 transform text-3xl -translate-x-2/4 text-white z-30">
-        Our Happy Customers
+        {language.happyCustomers.title}
       </h2>
       <Slider autoPlay={true} />
       <button

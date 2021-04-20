@@ -1,11 +1,23 @@
+import { useRouter } from "next/router";
+
+import en from "../../locales/en";
+import fr from "../../locales/fr";
+
 export default function SoftwarePurchase() {
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "en" ? en : fr;
+
   return (
-    <div className="text-center mt-14 bg-green-400 py-6 px-6 text-white" id="software-purchase">
+    <div
+      className="text-center mt-14 bg-green-400 py-6 px-6 text-white"
+      id="software-purchase"
+    >
       {/* header */}
       <div>
-        <h2 className="text-3xl">Software Purchasing Help</h2>
+        <h2 className="text-3xl">{language.softwarePurchasing.mainTitle}</h2>
         <h3 className="text-lg leading-tight mt-5">
-          Our experts will help you choose the best software for your needs.
+          {language.softwarePurchasing.subTitle}
         </h3>
       </div>
       <div className="lg:flex items-center">
@@ -22,10 +34,11 @@ export default function SoftwarePurchase() {
               <path d="M80.355 90.645H70.02a2.05 2.05 0 100 4.101h10.335a2.05 2.05 0 100-4.101zm0 0M29.781 100.898c-1.129 0-2.05.918-2.05 2.051S28.651 105 29.78 105h.008a2.047 2.047 0 002.047-2.05c0-1.134-.922-2.052-2.055-2.052zm0 0"></path>
             </g>
           </svg>
-          <h2 className="font-black text-2xl mt-5">Consult an Advisor</h2>
+          <h2 className="font-black text-2xl mt-5">
+            {language.softwarePurchasing.consult.title}
+          </h2>
           <p className="font-normal text-lg mt-3">
-            Discuss your needs with our software experts to see all your
-            options.
+            {language.softwarePurchasing.consult.content}
           </p>
         </div>
         {/* arrow */}
@@ -55,10 +68,11 @@ export default function SoftwarePurchase() {
               <path d="M53.86 14.031c-15.446-.738-28.57 11.18-29.313 26.625A28.014 28.014 0 0034.75 63.645a5.208 5.208 0 012 4v4.105a5.247 5.247 0 003.5 4.926v2.074a5.231 5.231 0 001.363 3.5 5.177 5.177 0 000 7 5.225 5.225 0 00.34 7.383A5.243 5.243 0 0045.5 98a1.706 1.706 0 001.438-2.691 1.888 1.888 0 00-.196-.301 1.8 1.8 0 00-.484-.32 1.895 1.895 0 00-.707-.18c-.016 0-.031-.008-.051-.008a1.75 1.75 0 110-3.5h7a1.75 1.75 0 100-3.5h-7a1.75 1.75 0 110-3.5h7a1.75 1.75 0 100-3.5h-7c-.965 0-1.75-.785-1.75-1.75V77h8.75a1.75 1.75 0 100-3.5H42c-.965 0-1.75-.785-1.75-1.75v-4.105a8.695 8.695 0 00-3.281-6.711c-10.453-8.59-11.961-24.028-3.371-34.485a24.5 24.5 0 0120.097-8.914c12.93.77 23.086 11.363 23.305 24.317a24.352 24.352 0 01-9.09 19.183 8.67 8.67 0 00-3.16 6.813v3.902c0 .965-.785 1.75-1.75 1.75h-5.25a1.75 1.75 0 100 3.5h3.5v1.75c0 .965-.785 1.75-1.75 1.75h-1.75a1.75 1.75 0 100 3.5h1.75a1.75 1.75 0 110 3.5h-1.75a1.75 1.75 0 100 3.5h1.75a1.75 1.75 0 110 3.5h-8.75a1.75 1.75 0 100 3.5h6.7a5.249 5.249 0 01-8.872 1.738 1.75 1.75 0 00-2.617 2.325 8.733 8.733 0 0012.328.738 8.745 8.745 0 002.813-5.078 5.194 5.194 0 003.41-6.512 5.21 5.21 0 00-1.125-1.961 5.177 5.177 0 000-7 5.231 5.231 0 001.363-3.5v-2.074a5.247 5.247 0 003.5-4.926v-3.902a5.265 5.265 0 011.855-4.09A27.825 27.825 0 0080.5 41.824c-.254-14.8-11.863-26.914-26.64-27.793zm0 0"></path>
             </g>
           </svg>
-          <h2 className="font-black text-2xl mt-5">Develop a Plan</h2>
+          <h2 className="font-black text-2xl mt-5">
+            {language.softwarePurchasing.develop.title}
+          </h2>
           <p className="font-normal text-lg mt-3">
-            We will design a custom tailored plan to meet all of your specific
-            needs.
+            {language.softwarePurchasing.develop.content}
           </p>
         </div>
         {/* arrow */}
@@ -89,15 +103,16 @@ export default function SoftwarePurchase() {
               <path d="M49.293 84.707c-.8-.8-2.098-.8-2.898 0l-5.801 5.8a2.053 2.053 0 002.902 2.903l5.8-5.805c.802-.8.798-2.097-.003-2.898zm0 0M20.293 55.707c-.8-.8-2.098-.8-2.898-.004l-5.805 5.8a2.053 2.053 0 002.902 2.903l5.801-5.8c.8-.801.8-2.098 0-2.899zm0 0M34.793 87.61c-.8-.801-2.098-.801-2.898 0L18 101.5c-.8.8-.8 2.098 0 2.898.8.801 2.102.801 2.902 0l13.891-13.89c.8-.801.8-2.098 0-2.899zm0 0M18.387 87.61c-.801-.801-2.098-.801-2.899 0L1.598 101.5a2.045 2.045 0 00-.004 2.898c.8.801 2.101.801 2.902 0l13.89-13.89c.802-.801.802-2.098 0-2.899zm0 0M17.39 70.207c-.8-.8-2.097-.8-2.898 0L.602 84.097C-.2 84.899-.2 86.2.602 87c.8.8 2.097.8 2.898 0l13.89-13.895c.801-.8.801-2.097 0-2.898zm0 0M63.797 41.203c-.8-.8-2.102-.8-2.902 0l-2.899 2.902a2.049 2.049 0 102.899 2.899l2.902-2.899c.8-.8.8-2.101 0-2.902zm0 0"></path>
             </g>
           </svg>
-          <h2 className="font-black text-2xl mt-5">Installation Help</h2>
+          <h2 className="font-black text-2xl mt-5">
+            {language.softwarePurchasing.installation.title}
+          </h2>
           <p className="font-normal text-lg mt-3">
-            We will get you up and running fast with our software installation
-            services.
+            {language.softwarePurchasing.installation.content}
           </p>
         </div>
       </div>
       <button className="rounded-full bg-blue-600 w-56 p-3 mt-9 hover:bg-blue-900">
-        Get Start Now
+        {language.softwarePurchasing.button}
       </button>
     </div>
   );

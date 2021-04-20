@@ -1,89 +1,98 @@
+import { useRouter } from "next/router";
+
+import en from "../../locales/en";
+import fr from "../../locales/fr";
+
 import ProgramCard from "../ProgramCard/ProgramCard";
 import ProgramsCollection from "../ProgramsCollection/ProgramsCollection";
 
 export default function PopularSoftware() {
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "en" ? en : fr;
+
   return (
     <div className="flex flex-col items-center" id="popular-software">
       <h2 className="text-center text-3xl font-light text-gray-600 mt-8">
-        Our Most Popular Software
+        {language.popularSotware.title}
       </h2>
-      <ProgramsCollection title="Popular Office Software">
+      <ProgramsCollection title={language.popularSotware.section1.title}>
         <ProgramCard
-          title="Microsoft Office Professional"
+          title={language.popularSotware.section1.program1.title}
           img="/msofficeprofessional.png"
-          description="Features: Word, Excel, PowerPoint, OneNote, Outlook, Publisher, Access\Best for small to medium size businesses\Regular updates provided by Microsoft"
+          description={language.popularSotware.section1.program1.description}
           price={399.99}
         />
         <ProgramCard
-          title="Microsoft Office Home & Business"
+          title={language.popularSotware.section1.program2.title}
           img="/msofficehome.png"
-          description="Features: Word, Excel, PowerPoint, OneNote, Outlook, Publisher, Access\Best for small to medium size businesses\Regular updates provided by Microsoft"
+          description={language.popularSotware.section1.program2.description}
           price={299.99}
         />
         <ProgramCard
-          title="Microsoft Office Professional"
+          title={language.popularSotware.section1.program3.title}
           img="/msofficepersonal.png"
-          description="Features: Word, Excel, PowerPoint, OneNote, Outlook, Publisher, Access\Best for small to medium size businesses\Regular updates provided by Microsoft"
+          description={language.popularSotware.section1.program3.description}
           price={99.99}
         />
       </ProgramsCollection>
-      <ProgramsCollection title="Popular Cyber Security Software">
+      <ProgramsCollection title={language.popularSotware.section2.title}>
         <ProgramCard
-          title="AVG Internet Security"
+          title={language.popularSotware.section2.program1.title}
           img="/avg_is.png"
-          description="Our advanced antivirus scans for, removes and flat-out stops viruses, ransomware, spyware, rootkits, Trojans, and other nasty malware\Hacker, Web, Email, and Data protection\Unlimited protection for all your home devices included"
+          description={language.popularSotware.section2.program1.description}
           price={99.99}
         />
         <ProgramCard
-          title="Avast Internet Security"
+          title={language.popularSotware.section2.program2.title}
           img="/avast_is.png"
-          description="Spot scams, spam, avoid fake websites, stop ransomeware in its tracks and firewall all your data\Avast is globally trusted by millions of users\3 Years of protection for all of your devices"
+          description={language.popularSotware.section2.program2.description}
           price={199.99}
         />
         <ProgramCard
-          title="ESET Internet Security"
+          title={language.popularSotware.section2.program3.title}
           img="/eset_is.png"
-          description="Enjoy your digital life to the fullest, protected by ESET's ultimate multi-layered security\Block exploits, protect from botnets and script attacks, and keep all of your data safe.\For when you need the most complete internet security"
+          description={language.popularSotware.section2.program3.description}
           price={79.99}
         />
       </ProgramsCollection>
-      <ProgramsCollection title="Popular Antivirus">
+      <ProgramsCollection title={language.popularSotware.section3.title}>
         <ProgramCard
-          title="AVG Ultimate"
+          title={language.popularSotware.section3.program1.title}
           img="/avg_av.png"
-          description="Award-winning security and performance for you and your family\Unlimited installs. For all your personal devices.\The all-in-one, best-in-class antivirus & tuneup combo"
+          description={language.popularSotware.section3.program1.description}
           price={89.99}
         />
         <ProgramCard
-          title="VIPRE Antivirus"
+          title={language.popularSotware.section3.program2.title}
           img="/vpire_av.png"
-          description="When you choose VIPRE, you’ll secure your data with the highest-rated malware defense that consistently earns 100% block rates\Protect Your Family from Today's Biggest Security Risks\The best value for your money"
+          description={language.popularSotware.section3.program2.description}
           price={49.99}
         />
         <ProgramCard
-          title="McAfee Antivirus"
+          title={language.popularSotware.section3.program3.title}
           img="/macfee_av.png"
-          description="McAfee is one of the world’s leading independent cybersecurity companies.\100% Guarantee: Viruses removed or your money back\Protection for all your PCs, Macs, smartphones and tablets."
+          description={language.popularSotware.section3.program3.description}
           price={29.99}
         />
       </ProgramsCollection>
-      <ProgramsCollection title="Popular PC Tuners">
+      <ProgramsCollection title={language.popularSotware.section4.title}>
         <ProgramCard
-          title="AVG Tuneup"
+          title={language.popularSotware.section4.program1.title}
           img="/avg_tp.png"
-          description="Explore the all-in-one tuning suite for your PC, Android and Mac\Makes old PCs live longer—and new PCs run faster!\Get a faster, cleaner, longer-lasting PC"
+          description={language.popularSotware.section4.program1.description}
           price={39.99}
         />
         <ProgramCard
-          title="CC Cleaner Pro"
+          title={language.popularSotware.section4.program2.title}
           img="/cc_tp.png"
-          description="CCleaner Professional analyzes PCs to see what can be cleaned. You decide when and what to clean\Regain your PC's speed, stability and privacy with CCleaner Professional\Unlimited users"
+          description={language.popularSotware.section4.program2.description}
           price={14.99}
         />
         <ProgramCard
-          title="MalwareBytes 3.0"
+          title={language.popularSotware.section4.program3.title}
           img="/malwarebytes_tp.png"
-          description="Malwarebytes 3 is a next-generation antivirus replacement.\Four layers of malware-crushing tech\Specialized ransomware protection"
+          description={language.popularSotware.section4.program3.description}
           price={19.99}
         />
       </ProgramsCollection>

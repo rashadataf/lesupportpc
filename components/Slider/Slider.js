@@ -1,15 +1,27 @@
 import React, { Component } from "react";
+import { withRouter } from "next/router";
+
+import en from "../../locales/en";
+import fr from "../../locales/fr";
 import classes from "./Slider.module.css";
 
 class MobileSlider extends Component {
+  state = {
+    handler: null,
+  };
   componentDidMount() {
     var slides = document.querySelectorAll(`.${classes.MobileSlide}`);
     let first = slides.item(0);
     let last = slides.item(slides.length - 1);
     first.parentNode.insertBefore(last, first);
     if (this.props.autoPlay) {
-      setInterval(MobileSlider.mobileNext, 3500);
+      let handler = setInterval(MobileSlider.mobileNext, 3500);
+      this.setState({ handler: handler });
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.handler);
   }
 
   static mobileNext = () => {
@@ -38,45 +50,77 @@ class MobileSlider extends Component {
         <div className={`${classes.MobileSlide} ${classes.active}`}>
           <div>
             <p>
-              Great people, great service. I have been surprised at the level of
-              care all of your staff put into my account. Thank you for being
-              there for me.
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide1.content
+                : fr.happyCustomers.slide1.content}
             </p>
-            <h3>William Franklin</h3>
-            <button>East Lansing, MI</button>
+            <h3>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide1.by
+                : fr.happyCustomers.slide1.by}
+            </h3>
+            <button>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide1.button
+                : fr.happyCustomers.slide1.button}
+            </button>
           </div>
         </div>
         <div className={classes.MobileSlide}>
           <div>
             <p>
-              What a great organization you are!!! That just has to be the
-              fastest support reply I have ever experienced. I am a happy
-              customer. Thank you so much.
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide2.content
+                : fr.happyCustomers.slide2.content}
             </p>
-            <h3>Michelle Geller</h3>
-            <button>Dallas, TX</button>
+            <h3>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide2.by
+                : fr.happyCustomers.slide2.by}
+            </h3>
+            <button>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide2.button
+                : fr.happyCustomers.slide2.button}
+            </button>
           </div>
         </div>
         <div className={classes.MobileSlide}>
           <div>
             <p>
-              Great people, great service. I have been surprised at the level of
-              care all of your staff put into my account. Thank you for being
-              there for me.
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide1.content
+                : fr.happyCustomers.slide1.content}
             </p>
-            <h3>William Franklin</h3>
-            <button>East Lansing, MI</button>
+            <h3>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide1.by
+                : fr.happyCustomers.slide1.by}
+            </h3>
+            <button>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide1.button
+                : fr.happyCustomers.slide1.button}
+            </button>
           </div>
         </div>
         <div className={classes.MobileSlide}>
           <div>
             <p>
-              What a great organization you are!!! That just has to be the
-              fastest support reply I have ever experienced. I am a happy
-              customer. Thank you so much.
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide2.content
+                : fr.happyCustomers.slide2.content}
             </p>
-            <h3>Michelle Geller</h3>
-            <button>Dallas, TX</button>
+            <h3>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide2.by
+                : fr.happyCustomers.slide2.by}
+            </h3>
+            <button>
+              {this.props.router.locale === "en"
+                ? en.happyCustomers.slide2.button
+                : fr.happyCustomers.slide2.button}
+            </button>
           </div>
         </div>
       </div>
@@ -84,4 +128,4 @@ class MobileSlider extends Component {
   }
 }
 
-export default MobileSlider;
+export default withRouter(MobileSlider);

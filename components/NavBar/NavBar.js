@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import TopBar from "../TopBar/TopBar";
 
+import en from "../../locales/en";
+import fr from "../../locales/fr";
+
 export default function NavBar() {
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "en" ? en : fr;
   const [open, setOpen] = useState(false);
   useEffect(() => {
     window.addEventListener("resize", function (event) {
@@ -47,19 +54,26 @@ export default function NavBar() {
           }`}
         >
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            <a href="/">Home</a>
+            <a href="/">{language.Navbar.home}</a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            <a href="/#about-us">About Us</a>
+            <a href="/#about-us">{language.Navbar.aboutUs}</a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            <a href="/#popular-software">Services</a>
+            <a href="/#popular-software">{language.Navbar.services}</a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            <a href="/#happy-customers">Happy Customers</a>
+            <a href="/#happy-customers">{language.Navbar.happyCustomers}</a>
           </li>
           <li className="text-lg flex space-x-4 md:space-x-3 bg-blue-600 cursor-pointer text-right md:text-center p-3">
-            <a href="#" id="fr">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push(router.pathname, router.pathname, { locale: "fr" });
+              }}
+              id="fr"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -81,7 +95,14 @@ export default function NavBar() {
                 </g>
               </svg>{" "}
             </a>
-            <a href="#" id="uk">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push(router.pathname, router.pathname, { locale: "en" });
+              }}
+              id="uk"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

@@ -1,9 +1,15 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
-import AdminServices from "../../services/admin.services";
+import en from "../../locales/en";
+import fr from "../../locales/fr";
+
+// import AdminServices from "../../services/admin.services";
 
 export default function AboutUs(props) {
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "en" ? en : fr;
   // const [aboutUs, setAboutUs] = useState();
   // useEffect(() => {
   //   async function getAboutUsData() {
@@ -29,14 +35,10 @@ export default function AboutUs(props) {
         </div>
         <div className="p-3 text-center space-y-3 md:w-1/2 md:leading-10 md:space-y-7">
           <h2 className="font-bold text-2xl text-gray-900 md:leading-10">
-            {props.aboutUs
-              ? props.aboutUs.title
-              : "We provide the latest software you need for your home, your business and your protection. "}
+            {props.aboutUs ? props.aboutUs.title : language.AboutUs.title}
           </h2>
           <p className="text-gray-700">
-            {props.aboutUs
-              ? props.aboutUs.content
-              : " We've built a company with the sole focus of making sure our customer service is the absolute best in the industry. You'll have peace of mind knowing that our award winning team is available whenever you need us. "}
+            {props.aboutUs ? props.aboutUs.content : language.AboutUs.content}
           </p>
         </div>
       </div>
@@ -78,10 +80,11 @@ export default function AboutUs(props) {
               ></path>
             </g>
           </svg>
-          <h2 className="text-xl text-gray-900">Antivirus</h2>
+          <h2 className="text-xl text-gray-900">
+            {language.AboutUs.antivirus.title}
+          </h2>
           <p className="text-gray-700 w-72 md:w-full">
-            We carry the best antivirus software titles in the business to keep
-            your PC Safe.{" "}
+            {language.AboutUs.antivirus.content}
           </p>
         </div>
         <div className="flex flex-col items-center text-center space-y-4 md:w-1/4">
@@ -96,10 +99,11 @@ export default function AboutUs(props) {
               d="M.453 13.492C.093 9.734.941 7.027 2.84 4.613 8.875-3.039 22.316.246 23.27 10.391c.597 6.293-2.961 12.117-9.895 12.988-6.867.855-12.355-4.004-12.922-9.887zM10.398.094C3.891.887-.598 6.204.063 13.445c.55 6.082 6.242 11.14 13.312 10.301 7.105-.86 10.867-6.832 10.273-13.355C23.098 4.34 17.406-.766 10.398.094zM8.547 12.19c0-2.168-.442-.52-.567-2.03 1.207-.567 1.82.12 2.024-1.618.047-.43-.406-.2.187-.492.832-.395.317.629 1.758.629.801 0 .895-.84 1.52-.551.8.305.176-.121.3.55.188 1.024.344 1.298 1.977 1.298.094 1.148.25.293-.207.918-.656.918-.453 1.207.125 2.046.285.43.223-.214.082.184-.457 1.453-1.539-.566-1.976 1.848-.079.46.406.55-.395.582l-.61-.23c-1.238-.762-1.253-.227-1.976.136-.598.324.125.14-.91.062.894-1.8-1.723-1.957-1.899-2.03.094-1.145.567-.52.567-1.302zm.941-4.246c0 1.973-.156 1.606-1.71 1.48l-.407 1.286c1.145 1.437 1.16.566.031 2.23.547 2.293.942.567 1.817 1.344.597.535.035.63.363 1.317.219.441.77.441 1.223.656 1.191-1.727 2.226-.031 2.273 0l1.332-.551c-.344-.703-.172-.777 0-1.48 1.113-.262.457-.094 1.524 0 .125-.504.375-.75.375-1.118 0-.734-.754-.566-.754-1.296 0-.66.754-.75.754-1.118 0-.672-.22-.64-.375-1.297 0 0-2.528.579-1.524-1.484-.547-.121-.879-.32-1.332-.55-.14.093-1.629 1.683-2.086 0-.707.062-1.004.292-1.52.55zm1.52 4.063v-.73c2.383-1.223 1.82 1.48 1.144 1.48-.578 0-.77-.184-1.144-.367zm-.563-.18c0 .547.5.914.75 1.297.864 0 2.086.121 2.086-1.48 0-.293-.234-.598-.375-.75-.441-.473-.894-.368-1.71-.368-.25.368-.75.75-.75 1.301zm0 0"
             ></path>
           </svg>
-          <h2 className="text-xl text-gray-900">Office Productivity</h2>
+          <h2 className="text-xl text-gray-900">
+            {language.AboutUs.officeProductivity.title}
+          </h2>
           <p className="text-gray-700 w-72 md:w-full">
-            Make your business and home office more productive with the best
-            software for your computer.{" "}
+            {language.AboutUs.officeProductivity.content}
           </p>
         </div>
         <div className="flex flex-col items-center text-center space-y-4 md:w-1/4">
@@ -114,9 +118,11 @@ export default function AboutUs(props) {
               d="M11.941 9.066h2.266v2.766c0 .973-.266 1.305-.785 1.809-.426.418-.84.796-1.48.957zm-3.41-.921c0 2.675-.715 4.972 1.43 6.539 1.8 1.34 1.89 1.355 3.55.156 2.356-1.703 1.641-3.531 1.641-6.695-1.195-.262-5.586-.403-6.62 0zM10.387.473c6.82-.852 12.316 4.035 12.87 9.914.606 6.332-3 12.12-9.89 12.976C6.497 24.215 1 19.343.445 13.45c-.605-6.418 3-12.105 9.961-12.976zm0-.364C3.875.91-.605 6.215.055 13.465c.96 10.469 14.562 13.808 20.988 6.14 2-2.382 2.945-5.304 2.59-9.199C23.078 4.352 17.403-.742 10.387.11zm0 0"
             ></path>
           </svg>
-          <h2 className="text-xl text-gray-900">Data Backup</h2>
+          <h2 className="text-xl text-gray-900">
+            {language.AboutUs.dataBackup.title}
+          </h2>
           <p className="text-gray-700 w-72 md:w-full">
-            Backup all your important files with our data backup partners.{" "}
+            {language.AboutUs.dataBackup.content}
           </p>
         </div>
       </div>
