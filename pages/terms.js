@@ -21,22 +21,22 @@ export default function Terms() {
       <NavBar />
       <div className="p-6">
         <h1 className="text-4xl mb-14 text-gray-600">{language.terms.title}</h1>
-        <h3 className="font-bold mb-6 text-gray-600">
+        {/* <h3 className="font-bold mb-6 text-gray-600">
           {language.terms.title1}
         </h3>
-        <p className="mb-14 text-gray-600">{language.terms.content1}</p>
-        <h3 className="font-bold mb-6 text-gray-600">
+        <p className="mb-14 text-gray-600">{language.terms.content1}</p> */}
+        {/* <h3 className="font-bold mb-6 text-gray-600">
           {language.terms.title2}
         </h3>
-        <p className="mb-14 text-gray-600">{language.terms.content2}</p>
+        <p className="mb-14 text-gray-600">{language.terms.content2}</p> */}
         <h3 className="font-bold mb-6 text-gray-600">
           {language.terms.title3}
         </h3>
         <p className="mb-14 text-gray-600">{language.terms.content3}</p>
-        <h3 className="font-bold mb-6 text-gray-600">
+        {/* <h3 className="font-bold mb-6 text-gray-600">
           {language.terms.title4}
         </h3>
-        <p className="mb-14 text-gray-600">{language.terms.content4}</p>
+        <p className="mb-14 text-gray-600">{language.terms.content4}</p> */}
         <h3 className="font-bold mb-6 text-gray-600">
           {language.terms.title5}
         </h3>

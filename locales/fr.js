@@ -186,7 +186,7 @@ export default {
     terms: {
         title: "Termes et conditions",
         title1: "Politique de livraison",
-        content1:"Tous les services sont livrés numériquement dans les 24 heures suivant l'achat.",
+        content1:"Tous les services sont livrés numériquement dans les 24 heures suivant l'achat.Tous les produits et services que vous avez achetés seront livrés par des liens numériques. Notre personnel prend grand soin de fournir un excellent service à tous nos clients et vous pouvez être sûr que notre équipe d'experts formés travaille pour vous.",
         title2:"Politique de remboursement",
         content2:"Si vous avez des problèmes avec votre achat ou le produit (comme un emballage endommagé, un article incorrect, un produit qui n'est plus nécessaire, etc.), vous pouvez nous appeler dans les 30 jours suivant la réception du produit pour recevoir un remboursement. Votre demande sera traitée par notre équipe de service à la clientèle et les remboursements seront émis dans les 5-10 jours ouvrables.",
         title3:"Annulation",

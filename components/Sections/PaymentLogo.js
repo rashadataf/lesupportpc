@@ -1,7 +1,7 @@
 export default function PaymentLogo() {
   return (
     <div className="w-full p-5 md:p-0 flex justify-center mt-10">
-      <img src="/payment-logos.png" />
+      <img src="/payment-logos.png" className="h-12 my-8" />
     </div>
   );
 }

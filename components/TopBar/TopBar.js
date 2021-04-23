@@ -52,7 +52,7 @@ export default function TopBar() {
             ></path>
           </g>
         </svg>
-        <p className="hidden sm:block">+905526766088</p>
+        <p className="hidden sm:block">+905358319555</p>
       </a>
     </div>
   );

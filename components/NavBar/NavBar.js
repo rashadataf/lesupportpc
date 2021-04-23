@@ -54,10 +54,26 @@ export default function NavBar() {
           }`}
         >
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            <a href="/">{language.Navbar.home}</a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/", "/", { locale });
+              }}
+            >
+              {language.Navbar.home}
+            </a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
-            <a href="/#about-us">{language.Navbar.aboutUs}</a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/about", "/about", { locale });
+              }}
+            >
+              {language.Navbar.aboutUs}
+            </a>
           </li>
           <li className="text-lg bg-blue-600 hover:bg-blue-400 cursor-pointer text-right md:text-center p-3">
             <a href="/#popular-software">{language.Navbar.services}</a>
@@ -128,7 +144,7 @@ export default function NavBar() {
                 </g>
               </svg>
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/supoort24" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -142,7 +158,7 @@ export default function NavBar() {
                 ></path>
               </svg>
             </a>
-            <a>
+            {/* <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -154,8 +170,8 @@ export default function NavBar() {
                   <path d="M12 5.438A6.572 6.572 0 005.437 12 6.572 6.572 0 0012 18.563 6.572 6.572 0 0018.563 12 6.572 6.572 0 0012 5.437zm0 11.718A5.161 5.161 0 016.844 12 5.161 5.161 0 0112 6.844 5.161 5.161 0 0117.156 12 5.161 5.161 0 0112 17.156zm0 0M18.719 3.105a1.94 1.94 0 000 3.88 1.94 1.94 0 001.941-1.938c0-1.07-.87-1.942-1.941-1.942zm0 2.473a.532.532 0 110-1.063.532.532 0 010 1.063zm0 0"></path>
                 </g>
               </svg>
-            </a>
-            <a>
+            </a> */}
+            <a href="https://twitter.com/lesupport1" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -168,7 +184,7 @@ export default function NavBar() {
                 ></path>
               </svg>
             </a>
-            <a>
+            {/* <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -180,7 +196,7 @@ export default function NavBar() {
                   d="M23.309 14.547C25.047 6.738 18.203-.36 10.172 1.004 5.809-1.703 0 1.355 0 6.547a6.45 6.45 0 00.91 3.308C-.703 17.684 6.195 24.68 14.223 23.223c5.675 3 11.945-2.985 9.086-8.676zm-7.637 4.71c-2.11.868-5.578.872-7.676-.226-2.992-1.597-3.527-5.191-.945-5.191 1.945 0 1.332 2.27 3.297 3.195.902.418 2.84.461 3.968-.3 1.114-.747 1.008-1.919.407-2.477-1.606-1.48-6.192-.89-8.29-3.485-.91-1.12-1.081-3.105.04-4.543 1.949-2.511 7.68-2.664 10.14-.77 2.274 1.763 1.66 4.099-.175 4.099-2.208 0-1.047-2.887-4.61-2.887-2.582 0-3.598 1.836-1.777 2.73 2.465 1.223 8.75.817 8.75 5.602-.008 1.992-1.227 3.476-3.13 4.254zm0 0"
                 ></path>
               </svg>
-            </a>
+            </a> */}
           </li>
         </ul>
       </nav>

@@ -195,7 +195,7 @@ export default {
     terms: {
         title: "Terms and Conditions",
         title1: "Delivery Policy",
-        content1:"All services are delivered digitally within 24 hours of purchase.",
+        content1:"All services are delivered digitally within 24 hours of purchase.All products and services that you have purchased will be delivered by digital links. Our staff takes great care in providing excellent service to all of our customers and you can be confident that our team of trained experts is working for you.",
         title2:"Refund Policy",
         content2:"If you have any problems with your purchase you may call us within 30 days of receipt of product to receive a refund. Your request will be processed by our Customer Service team and refunds will be issued immediately but may take up to 10 business days to fully deposit into your account.",
         title3:"Cancellation",
