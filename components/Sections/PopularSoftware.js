@@ -16,26 +16,6 @@ export default function PopularSoftware() {
       <h2 className="text-center text-3xl font-light text-gray-600 mt-8">
         {language.popularSotware.title}
       </h2>
-      <ProgramsCollection title={language.popularSotware.section1.title}>
-        <ProgramCard
-          title={language.popularSotware.section1.program1.title}
-          img="/msofficeprofessional.png"
-          description={language.popularSotware.section1.program1.description}
-          price={399.99}
-        />
-        <ProgramCard
-          title={language.popularSotware.section1.program2.title}
-          img="/msofficehome.png"
-          description={language.popularSotware.section1.program2.description}
-          price={299.99}
-        />
-        <ProgramCard
-          title={language.popularSotware.section1.program3.title}
-          img="/msofficepersonal.png"
-          description={language.popularSotware.section1.program3.description}
-          price={99.99}
-        />
-      </ProgramsCollection>
       <ProgramsCollection title={language.popularSotware.section2.title}>
         <ProgramCard
           title={language.popularSotware.section2.program1.title}

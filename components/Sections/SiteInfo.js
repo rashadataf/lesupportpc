@@ -82,7 +82,7 @@ export default function SiteInfo() {
               {language.terms.title1}
             </a>
           </li>
-          <li className="text-gray-500">
+          {/* <li className="text-gray-500">
             <a
               href="#"
               onClick={(e) => {
@@ -92,7 +92,7 @@ export default function SiteInfo() {
             >
               {language.contract.title}
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       <hr className="my-4 lg:hidden" />
