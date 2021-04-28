@@ -19,7 +19,7 @@ export default function ProgramCard(props) {
       </div>
       <div className="text-gray-700 my-5 text-2xl">
         Price:{" "}
-        <span className="font-extrabold text-gray-700">${props.price}</span>
+        <span className="font-extrabold text-gray-700">{props.price} TL</span>
       </div>
       <button className="px-6 py-3 bg-blue-600 text-white">
         <a href="/checkout">BUY NOW</a>

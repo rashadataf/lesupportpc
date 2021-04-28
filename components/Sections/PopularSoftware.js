@@ -21,19 +21,19 @@ export default function PopularSoftware() {
           title={language.popularSotware.section2.program1.title}
           img="/avg_is.png"
           description={language.popularSotware.section2.program1.description}
-          price={99.99}
+          price={819.99}
         />
         <ProgramCard
           title={language.popularSotware.section2.program2.title}
           img="/avast_is.png"
           description={language.popularSotware.section2.program2.description}
-          price={199.99}
+          price={1639.99}
         />
         <ProgramCard
           title={language.popularSotware.section2.program3.title}
           img="/eset_is.png"
           description={language.popularSotware.section2.program3.description}
-          price={79.99}
+          price={655.99}
         />
       </ProgramsCollection>
       <ProgramsCollection title={language.popularSotware.section3.title}>
@@ -41,19 +41,19 @@ export default function PopularSoftware() {
           title={language.popularSotware.section3.program1.title}
           img="/avg_av.png"
           description={language.popularSotware.section3.program1.description}
-          price={89.99}
+          price={737.99}
         />
         <ProgramCard
           title={language.popularSotware.section3.program2.title}
           img="/vpire_av.png"
           description={language.popularSotware.section3.program2.description}
-          price={49.99}
+          price={399.99}
         />
         <ProgramCard
           title={language.popularSotware.section3.program3.title}
           img="/macfee_av.png"
           description={language.popularSotware.section3.program3.description}
-          price={29.99}
+          price={245.99}
         />
       </ProgramsCollection>
       <ProgramsCollection title={language.popularSotware.section4.title}>
@@ -61,19 +61,19 @@ export default function PopularSoftware() {
           title={language.popularSotware.section4.program1.title}
           img="/avg_tp.png"
           description={language.popularSotware.section4.program1.description}
-          price={39.99}
+          price={324.99}
         />
         <ProgramCard
           title={language.popularSotware.section4.program2.title}
           img="/cc_tp.png"
           description={language.popularSotware.section4.program2.description}
-          price={14.99}
+          price={122.99}
         />
         <ProgramCard
           title={language.popularSotware.section4.program3.title}
           img="/malwarebytes_tp.png"
           description={language.popularSotware.section4.program3.description}
-          price={19.99}
+          price={164.99}
         />
       </ProgramsCollection>
     </div>
