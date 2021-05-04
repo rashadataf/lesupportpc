@@ -10,6 +10,7 @@ export default function Checkout() {
   const [cardExpireDateMonth, setCardExpireDateMonth] = useState("");
   const [cardExpireDateYear, setCardExpireDateYear] = useState("");
   const [amount, setAmount] = useState();
+  const [htmlContent, setHtmlContent] = useState(null);
   const router = useRouter();
   const { price, title } = router.query;
   // useEffect(() => {
@@ -40,8 +41,13 @@ export default function Checkout() {
       cardType,
       // amount,
     });
+    console.log(result.data);
+    setHtmlContent(result.data);
   }
 
+  if (htmlContent) {
+    return <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>;
+  }
   return (
     <div className="flex flex-col p-5 items-center w-full space-y-8 my-8 lg:flex-row lg:space-y-0 lg:items-start">
       <div className="bg-gray-100 w-10/12 p-3 lg:w-full">

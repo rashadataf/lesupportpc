@@ -1,5 +1,13 @@
+const express = require("express");
+const next = require("next");
+const path = require("path");
 const axios = require("axios");
 const crypto = require("crypto");
+
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
 function getHash(string) {
   let hash = crypto.createHash("sha1");
@@ -7,8 +15,10 @@ function getHash(string) {
   return hash.digest("base64");
 }
 
-export default function helloAPI(req, res) {
-  if (req.method === "POST") {
+app.prepare().then(() => {
+  const server = express();
+
+  server.post("/api/pay", function (req, res) {
     const {
       cardNumber,
       cardName,
@@ -27,11 +37,6 @@ export default function helloAPI(req, res) {
       cardType,
       // amount,
     });
-
-    // const cardNumber = "#4025903160410013#";
-    // const CVV = "123";
-    // const cardExpireDateMonth = "07";
-    // const cardExpireDateYear = "20";
     const amount = 5;
     const customerId = 97138822;
     const merchantId = 55538;
@@ -83,18 +88,28 @@ export default function helloAPI(req, res) {
     };
     axios
       .post(
-        "https://boatest.kuveytturk.com.tr/boa.virtualpos.services/Home/ThreeDModelPayGate",
+        "https://boa.kuveytturk.com.tr/sanalposservice/Home/ThreeDModelPayGate",
         xmlBodyStr,
         config
       )
-      .then((res) => {
-        console.log("success");
-        console.log(res);
+      .then((result) => {
+        res.write(result.data);
+        res.end();
       })
       .catch((err) => {
         console.log("error");
         console.log(err);
       });
-    res.send();
-  }
-}
+    // res.setHeader("Content-Type", "text/html");
+
+    res.end();
+  });
+
+  server.all("*", (req, res) => {
+    return handle(req, res);
+  });
+  server.listen(port, (err) => {
+    if (err) throw err;
+    console.log(`> Ready on http://localhost:${port}`);
+  });
+});
