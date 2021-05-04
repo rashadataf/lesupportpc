@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ProgramCard(props) {
   return (
     <div className="p-7 border border-gray-300 bg-gray-50">
@@ -22,7 +24,15 @@ export default function ProgramCard(props) {
         <span className="font-extrabold text-gray-700">{props.price} TL</span>
       </div>
       <button className="px-6 py-3 bg-blue-600 text-white">
-        <a href="/checkout">BUY NOW</a>
+        <Link
+          href={{
+            pathname: "/checkout",
+            query: { price: props.price, title: props.title },
+          }}
+          as="/checkout"
+        >
+          <a>BUY NOW</a>
+        </Link>
       </button>
     </div>
   );
