@@ -1,53 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
 
 export default function Checkout() {
-  const [cardNumber, setCardNumber] = useState("");
-  const [cardName, setCardName] = useState("");
-  const [cardType, setCardType] = useState("");
-  const [CVV, setCVV] = useState(0);
-  const [cardExpireDateMonth, setCardExpireDateMonth] = useState("");
-  const [cardExpireDateYear, setCardExpireDateYear] = useState("");
-  const [amount, setAmount] = useState();
-  const [htmlContent, setHtmlContent] = useState(null);
   const router = useRouter();
   const { price, title } = router.query;
-  // useEffect(() => {
-  // if (!title || !price) {
-  //   router.push("/");
-  // }
-  // if (price) {
-  //   setAmount(price);
-  // }
-  // });
+  useEffect(() => {
+    if (!title || !price) {
+      router.push("/");
+    }
+  });
 
-  async function handleSubmit() {
-    console.log({
-      cardName,
-      cardNumber,
-      CVV,
-      cardExpireDateMonth,
-      cardExpireDateYear,
-      cardType,
-      // amount,
-    });
-    const result = await axios.post("/api/pay", {
-      cardName,
-      cardNumber,
-      CVV,
-      cardExpireDateMonth,
-      cardExpireDateYear,
-      cardType,
-      // amount,
-    });
-    console.log(result.data);
-    setHtmlContent(result.data);
-  }
-
-  if (htmlContent) {
-    return <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>;
-  }
   return (
     <div className="flex flex-col p-5 items-center w-full space-y-8 my-8 lg:flex-row lg:space-y-0 lg:items-start">
       <div className="bg-gray-100 w-10/12 p-3 lg:w-full">
@@ -112,7 +74,11 @@ export default function Checkout() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center w-full space-y-8">
+      <form
+        action="/php/payment.php"
+        method="POST"
+        className="flex flex-col items-center w-full space-y-8"
+      >
         <div className="bg-gray-100 w-10/12 p-3">
           <h1 className="text-gray-700 text-2xl font-medium mb-3">
             Credit Card Information
@@ -122,8 +88,7 @@ export default function Checkout() {
             <label>Card Holder Name</label>
             <input
               type="text"
-              value={cardName}
-              onChange={(event) => setCardName(event.target.value)}
+              name="cardName"
               placeholder="Enter Your Card Holder Name"
               className="bg-white p-3 border-2 border-gray-300 mt-2"
             />
@@ -132,8 +97,7 @@ export default function Checkout() {
             <label>Card Number</label>
             <input
               type="text"
-              value={cardNumber}
-              onChange={(event) => setCardNumber(event.target.value)}
+              name="cardNumber"
               placeholder="Enter Your Card Number"
               className="bg-white p-3 border-2 border-gray-300 mt-2"
             />
@@ -142,8 +106,7 @@ export default function Checkout() {
             <label>CVV</label>
             <input
               type="number"
-              value={CVV}
-              onChange={(event) => setCVV(event.target.value)}
+              name="CVV"
               placeholder="CVV"
               className="bg-white p-3 border-2 border-gray-300 mt-2"
             />
@@ -153,8 +116,7 @@ export default function Checkout() {
             <div className="space-x-8 mt-3">
               <select
                 className="bg-white p-3 text-gray-500"
-                value={cardExpireDateMonth}
-                onChange={(event) => setCardExpireDateMonth(event.target.value)}
+                name="cardExpireDateMonth"
               >
                 <option value="0">Month</option>
                 <option value="01">1</option>
@@ -172,8 +134,7 @@ export default function Checkout() {
               </select>
               <select
                 className="bg-white p-3 text-gray-500"
-                value={cardExpireDateYear}
-                onChange={(event) => setCardExpireDateYear(event.target.value)}
+                name="cardExpireDateYear"
               >
                 <option value="0">Year</option>
                 <option value="20">2020</option>
@@ -193,11 +154,7 @@ export default function Checkout() {
           <div className="mt-6">
             <label>Card Type</label>
             <div className="space-x-8 mt-3">
-              <select
-                className="bg-white p-3 text-gray-500"
-                value={cardType}
-                onChange={(event) => setCardType(event.target.value)}
-              >
+              <select className="bg-white p-3 text-gray-500" name="cardType">
                 <option value="">Type</option>
                 <option value="Visa">Visa</option>
                 <option value="MasterCard">Master Card</option>
@@ -215,6 +172,7 @@ export default function Checkout() {
               <tr>
                 <th className="border-2 p-3">Total:</th>
                 <td className="border-2 p-3 text-gray-600">{price} TL</td>
+                <input name="amount" type="number" value={price} hidden />
               </tr>
             </tbody>
           </table>
@@ -230,7 +188,7 @@ export default function Checkout() {
         <div className="w-10/12">
           <button
             className="mb-3 rounded-full py-3 px-6 bg-green-500 text-white"
-            onClick={handleSubmit}
+            type="submit"
           >
             Purchase
           </button>
@@ -238,7 +196,7 @@ export default function Checkout() {
         <div className="w-10/12">
           <img src="/verfifiedsign.png" />
         </div>
-      </div>
+      </form>
     </div>
   );
 }

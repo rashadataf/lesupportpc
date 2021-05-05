@@ -21,19 +21,19 @@ export default function PopularSoftware() {
           title={language.popularSotware.section2.program1.title}
           img="/avg_is.png"
           description={language.popularSotware.section2.program1.description}
-          price={819.99}
+          price={990}
         />
         <ProgramCard
           title={language.popularSotware.section2.program2.title}
           img="/avast_is.png"
           description={language.popularSotware.section2.program2.description}
-          price={1639.99}
+          price={1499}
         />
         <ProgramCard
           title={language.popularSotware.section2.program3.title}
           img="/eset_is.png"
           description={language.popularSotware.section2.program3.description}
-          price={655.99}
+          price={3499}
         />
       </ProgramsCollection>
       <ProgramsCollection title={language.popularSotware.section3.title}>
@@ -41,13 +41,13 @@ export default function PopularSoftware() {
           title={language.popularSotware.section3.program1.title}
           img="/avg_av.png"
           description={language.popularSotware.section3.program1.description}
-          price={737.99}
+          price={2499}
         />
         <ProgramCard
           title={language.popularSotware.section3.program2.title}
           img="/vpire_av.png"
           description={language.popularSotware.section3.program2.description}
-          price={399.99}
+          price={4999}
         />
         <ProgramCard
           title={language.popularSotware.section3.program3.title}

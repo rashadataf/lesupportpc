@@ -98,30 +98,33 @@ export default function helloAPI(req, res) {
     //   });
     const html = `<!DOCTYPE html>
     <html>
-    <head runat="server">
+      <head runat="server">
         <title></title>
-    </head>
-    <body onload="OnLoadEvent();">
-        <form name="downloadForm"
-            action="https://goguvenliodeme.bkm.com.tr/troy/approve"
-            method="POST">
-            <input type="hidden"
-                name="goreq"
-                value="eyJleHBpcnkiOiIyNTA2IiwiZ29TdGFtcCI6ImV5SmhiR2NpT2lKSVV6VXhNaUo5LmV5SnpkV0lpT2lJd01EQXdNREF3TURBd05UVTFNemdpTENKMGFXMWxiM1YwVTJWamIyNWtjeUk2TkRNeU1EQXdNREFzSW5KdmJHVnpJam9pSWl3aVpYaHdJam94TmpZek16TTNNamd5ZlEubDdVS0pkcmkzUWtCcU0xREZZNUxBRkJBSEpsSTROUXZnUWlPWUhpbWEzTTRkQU9fV2Jfdm9KMERJTFI3cGx3OE9YYzRSNkRHMlQwX3M0S21teG5YWVEiLCJpZCI6IjAyMDU3OWVmNmRlOS0yOTYxLTRjOGMtYWI3YS1mZGZmZWJlNWI0YzYiLCJtYWMiOiJReEFtVk9XUStUc1lwaXhYMVwvS3FNTjRcL2lUdVJ3VU5TNElFNG0yaG1PWldyaG5vNDF4aHNacEN5dDI5U25sckxFYUFRUmpPSDhvXC8rN2NxdGRES2lDYXZZYjZhclB0V282YlM2MkJRWld4Zk1aMmxBckxYN0pYSWxvejNaNWVOKytqTHZxOHV0MGtza0Q5UUhoTVFpMkg5OEY0SUIxdVBLenI0Zlc3cXJxcFk3Rms1OFN1VFhQcEhqVVhOV1VMOUF5b0ZIdlJvMVwvbHV5dGRHNmg2WjhrYUFGYkxTVHZjZ1VpM2FqSDBDMm1EWVVKeDZsdVRoSXhac2dEY3drRTFTRWU5XC9UaWNTU2NDMisrSjZzc2RkQlJXK3NIYlpBR1pTcmkxVDBzTGVYbXVUa09iWktmVHA0RGRPSTdiaTVHWUxXckY1QUtQWndOV3dUNGxIZ0w5NDc4Zz09IiwidGltZSI6IjIwMjEwNTA0MTcwODAyIiwidmVyc2lvbiI6IjAuMDMifQ==">
-            <!-- To support javascript unaware/disabled browsers -->
-            <noscript>
-        <center>Please click the submit button below.<br>
-        <input type="submit" name="submit" value="Submit"></center>
-      </noscript>
+      </head>
+      <body onload="OnLoadEvent();">
+        <form
+          name="downloadForm"
+          action="https://goguvenliodeme.bkm.com.tr/troy/approve"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="goreq"
+            value="eyJleHBpcnkiOiIyNTA2IiwiZ29TdGFtcCI6ImV5SmhiR2NpT2lKSVV6VXhNaUo5LmV5SnpkV0lpT2lJd01EQXdNREF3TURBd05UVTFNemdpTENKMGFXMWxiM1YwVTJWamIyNWtjeUk2TkRNeU1EQXdNREFzSW5KdmJHVnpJam9pSWl3aVpYaHdJam94TmpZek16TTNNamd5ZlEubDdVS0pkcmkzUWtCcU0xREZZNUxBRkJBSEpsSTROUXZnUWlPWUhpbWEzTTRkQU9fV2Jfdm9KMERJTFI3cGx3OE9YYzRSNkRHMlQwX3M0S21teG5YWVEiLCJpZCI6IjAyMDU3OWVmNmRlOS0yOTYxLTRjOGMtYWI3YS1mZGZmZWJlNWI0YzYiLCJtYWMiOiJReEFtVk9XUStUc1lwaXhYMVwvS3FNTjRcL2lUdVJ3VU5TNElFNG0yaG1PWldyaG5vNDF4aHNacEN5dDI5U25sckxFYUFRUmpPSDhvXC8rN2NxdGRES2lDYXZZYjZhclB0V282YlM2MkJRWld4Zk1aMmxBckxYN0pYSWxvejNaNWVOKytqTHZxOHV0MGtza0Q5UUhoTVFpMkg5OEY0SUIxdVBLenI0Zlc3cXJxcFk3Rms1OFN1VFhQcEhqVVhOV1VMOUF5b0ZIdlJvMVwvbHV5dGRHNmg2WjhrYUFGYkxTVHZjZ1VpM2FqSDBDMm1EWVVKeDZsdVRoSXhac2dEY3drRTFTRWU5XC9UaWNTU2NDMisrSjZzc2RkQlJXK3NIYlpBR1pTcmkxVDBzTGVYbXVUa09iWktmVHA0RGRPSTdiaTVHWUxXckY1QUtQWndOV3dUNGxIZ0w5NDc4Zz09IiwidGltZSI6IjIwMjEwNTA0MTcwODAyIiwidmVyc2lvbiI6IjAuMDMifQ=="
+          />
+          <noscript>
+            <input type="submit" name="submit" value="Submit" />
+          </noscript>
         </form>
-
-        <script language="Javascript">                
-        function OnLoadEvent() {
+    
+        <script language="Javascript">
+          function OnLoadEvent() {
             document.downloadForm.submit();
-        }
+          }
         </script>
-    </body>
-    </html>`;
+      </body>
+    </html>
+    `;
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write(html);
     res.end();
