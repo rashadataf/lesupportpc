@@ -102,10 +102,10 @@ export default function SiteInfo() {
         </h2>
         <ul>
           <li className="text-gray-500 uppercase">
-            cumhuriyt mah hürriyet cad turgut reıs
+            1229 Sainte Catherine Street.W
           </li>
-          <li className="text-gray-500 uppercase">no : 7 iç kapı no : 1</li>
-          <li className="text-gray-500 uppercase">esenyurt /istanbul</li>
+          {/* <li className="text-gray-500 uppercase">no : 7 iç kapı no : 1</li> */}
+          <li className="text-gray-500 uppercase">Montréal , Canada</li>
         </ul>
       </div>
       <hr className="my-4 lg:hidden" />

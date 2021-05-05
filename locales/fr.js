@@ -6,9 +6,9 @@ export default {
         happyCustomers: "Service Bonheur",
     },
     Hero: {
-        title1: "Bienvenue a Depannage Ordi",
+        title1: "Bienvenue Au support 24",
         title2: "Le meilleur service d'assistance informatique au monde!",
-        title3: "Nous nous assurons que vous ordinateurs sont surs et sécurisés",
+        title3: "Nous nous assurons que vos ordinateurs sont sûrs et sécurisés",
     },
     AboutUs: {
         title:
