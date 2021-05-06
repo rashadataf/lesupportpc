@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Checkout() {
+export default function Checkout({ program }) {
   const router = useRouter();
-  const { price, title } = router.query;
-  useEffect(() => {
-    if (!title || !price) {
-      router.push("/");
-    }
-  });
+
+  // useEffect(() => {
+  //   if (!program) {
+  //     router.push("/");
+  //   }
+  // });
 
   return (
     <div className="flex flex-col p-5 items-center w-full space-y-8 my-8 lg:flex-row lg:space-y-0 lg:items-start">
@@ -177,12 +177,21 @@ export default function Checkout() {
             <tbody>
               <tr>
                 <th className="border-2 p-3">Package:</th>
-                <td className="border-2 p-3 text-gray-600">{title}</td>
+                <td className="border-2 p-3 text-gray-600">
+                  {program ? program.title : ""}
+                </td>
               </tr>
               <tr>
                 <th className="border-2 p-3">Total:</th>
-                <td className="border-2 p-3 text-gray-600">{price} TL</td>
-                <input name="amount" type="number" value={price} hidden />
+                <td className="border-2 p-3 text-gray-600">
+                  {program ? program.price : ""} TL
+                </td>
+                <input
+                  name="amount"
+                  type="number"
+                  value={program ? program.price : 0}
+                  hidden
+                />
               </tr>
             </tbody>
           </table>

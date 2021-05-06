@@ -22,18 +22,21 @@ export default function PopularSoftware() {
           img="/avg_is.png"
           description={language.popularSotware.section2.program1.description}
           price={990}
+          link="avg-internet-security"
         />
         <ProgramCard
           title={language.popularSotware.section2.program2.title}
           img="/avast_is.png"
           description={language.popularSotware.section2.program2.description}
           price={1499}
+          link="avast-internet-security"
         />
         <ProgramCard
           title={language.popularSotware.section2.program3.title}
           img="/eset_is.png"
           description={language.popularSotware.section2.program3.description}
           price={3499}
+          link="eset-internet-security"
         />
       </ProgramsCollection>
       <ProgramsCollection title={language.popularSotware.section3.title}>
@@ -42,18 +45,21 @@ export default function PopularSoftware() {
           img="/avg_av.png"
           description={language.popularSotware.section3.program1.description}
           price={2499}
+          link="avg-ultimate"
         />
         <ProgramCard
           title={language.popularSotware.section3.program2.title}
           img="/vpire_av.png"
           description={language.popularSotware.section3.program2.description}
           price={4999}
+          link="vipre-antivirus"
         />
         <ProgramCard
           title={language.popularSotware.section3.program3.title}
           img="/macfee_av.png"
           description={language.popularSotware.section3.program3.description}
           price={245.99}
+          link="mcafee-antivirus"
         />
       </ProgramsCollection>
       <ProgramsCollection title={language.popularSotware.section4.title}>
@@ -62,18 +68,21 @@ export default function PopularSoftware() {
           img="/avg_tp.png"
           description={language.popularSotware.section4.program1.description}
           price={324.99}
+          link="avg-ultimate-tuneup"
         />
         <ProgramCard
           title={language.popularSotware.section4.program2.title}
           img="/cc_tp.png"
           description={language.popularSotware.section4.program2.description}
           price={122.99}
+          link="cc-cleaner-pro"
         />
         <ProgramCard
           title={language.popularSotware.section4.program3.title}
           img="/malwarebytes_tp.png"
           description={language.popularSotware.section4.program3.description}
           price={164.99}
+          link="malware-bytes"
         />
       </ProgramsCollection>
     </div>
