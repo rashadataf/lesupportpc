@@ -7,24 +7,24 @@ import SiteInfo from "../../components/Sections/SiteInfo";
 import PaymentLogo from "../../components/Sections/PaymentLogo";
 
 const programs = {
-  "avg-internet-security": {
-    title: "AVG Internet Security",
+  "starter-pack": {
+    title: "starter pack",
     price: 990,
   },
-  "avast-internet-security": {
-    title: "Avast Internet Security",
+  "silver-pack": {
+    title: "silver pack",
     price: 1499,
   },
-  "eset-internet-security": {
-    title: "ESET Internet Security",
+  "platinum-pack": {
+    title: "platinum pack",
     price: 3499,
   },
-  "avg-ultimate": {
-    title: "AVG Ultimate",
+  "golden-pack": {
+    title: "golden pack",
     price: 2499,
   },
-  "vipre-antivirus": {
-    title: "VIPRE Antivirus",
+  "vip-pack": {
+    title: "vip pack",
     price: 4999,
   },
   "mcafee-antivirus": {

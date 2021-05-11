@@ -84,21 +84,21 @@ export default {
         section2: {
             title: "Popular Cyber Security Software",
             program1: {
-                title: "AVG Internet Security",
+                title: "starter pack",
                 description:"Our advanced antivirus scans for, removes and flat-out stops viruses, ransomware, spyware, rootkits, Trojans, and other nasty malware\\Hacker, Web, Email, and Data protection\\Unlimited protection for all your home devices included"
                 ,
                 price: "Price",
                 button: "Buy Now",
             },
             program2: {
-                title: "Avast Internet Security",
+                title: "silver pack",
                 description:"Spot scams, spam, avoid fake websites, stop ransomeware in its tracks and firewall all your data\\Avast is globally trusted by millions of users\\ 3 Years of protection for all of your devices"
                 ,
                 price: "Price",
                 button: "Buy Now",
             },
             program3: {
-                title: "ESET Internet Security",
+                title: "platinum pack",
                 description:"Enjoy your digital life to the fullest, protected by ESET's ultimate multi-layered security\\Block exploits, protect from botnets and script attacks, and keep all of your data safe.\\For when you need the most complete internet security"
                 ,
                 price: "Price",
@@ -108,14 +108,14 @@ export default {
         section3: {
             title: "Popular Antivirus",
             program1: {
-                title: "AVG Ultimate",
+                title: "golden pack",
                 description:"Award-winning security and performance for you and your family\\Unlimited installs. For all your personal devices.\\The all-in-one, best-in-class antivirus & tuneup combo"
                 ,
                 price: "Price",
                 button: "Buy Now",
             },
             program2: {
-                title: "VIPRE Antivirus",
+                title: "vip pack",
                 description:"When you choose VIPRE, you’ll secure your data with the highest-rated malware defense that consistently earns 100% block rates\\Protect Your Family from Today's Biggest Security Risks\\The best value for your money"
                 ,
                 price: "Price",

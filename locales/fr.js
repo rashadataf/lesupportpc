@@ -83,19 +83,19 @@ export default {
         section2: {
             title: "Logiciels de Sécurité Populaires",
             program1: {
-                title: "AVG Internet Security",
+                title: "starter pack",
                 description: "Notre antivirus avancé analyse et supprime les virus, les logiciels de ransomware, les logiciels espions, les rootkits, les chevaux de Troie et autres logiciels malveillants.\\Protection de votre Navigation, Email et Données Personelles contre les Pirates\\Protection illimitée pour tous vos appareils domestiques",
                 price: "Prix",
                 button: "Acheter",
             },
             program2: {
-                title: "Avast Internet Security",
+                title: "silver pack",
                 description: "Détecte les scams, spam, les faux sites Web, les ransomwares et protege toutes vos données par un parefeu\\Avast est mondialement reconnu par des millions d'utilisateurs\\ 3 ans de protection pour tous vos appareils",
                 price: "Prix",
                 button: "Acheter",
             },
             program3: {
-                title: "ESET Internet Security",
+                title: "platinum pack",
                 description: "Profitez de votre vie numérique au maximum, protégé par la sécurité multi-couches ultime d'ESET\\Bloque les vulnérabilités, vous protége des botnets et des attaques de script et garde toutes vos données en sécurité.\\Pour ceux qui ont besoin de la sécurité Internet la plus complète",
                 price: "Prix",
                 button: "Acheter",
@@ -104,13 +104,13 @@ export default {
         section3: {
             title: "Antivirus Populaires",
             program1: {
-                title: "AVG Ultimate",
+                title: "golden pack",
                 description: "Une garantie et une performance primées pour vous et votre famille\\Installations illimitées. Pour tous vos appareils personnels.\\Solution tout-en-un, antivirus et optimisateur",
                 price: "Prix",
                 button: "Acheter",
             },
             program2: {
-                title: "VIPRE Antivirus",
+                title: "vip pack",
                 description: "En choisissant VIPRE, vous protégez vos données avec la solution anti-malware la mieux notée et qui sort systématiquement des taux de blocage de 100%\\Protégez votre famille des plus grands risques de sécurité d'aujourd'hui\\Le meilleur compromis qualité/prix",
                 price: "Prix",
                 button: "Acheter",

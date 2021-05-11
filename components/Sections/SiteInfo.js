@@ -116,6 +116,7 @@ export default function SiteInfo() {
         <ul>
           <li className="text-gray-500">E: lesupoort24@gmail.com</li>
           <li className="text-gray-500">T: +90 535 831 95 55</li>
+          <li className="text-gray-500">T: +33184672092</li>
         </ul>
       </div>
     </div>
