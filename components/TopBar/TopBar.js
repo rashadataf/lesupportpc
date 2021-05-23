@@ -21,12 +21,13 @@ export default function TopBar() {
         >
           <path d="M54.08 37.24c0 2.41-1.96 4.38-4.38 4.38H8.39c-2.41 0-4.38-1.96-4.38-4.38V8.38c0-.59.12-1.15.33-1.66l17.48 19.83a9.658 9.658 0 007.23 3.27c2.77 0 5.4-1.19 7.23-3.27L53.75 6.72c.21.51.33 1.07.33 1.66v28.86zM49.7 4c.34 0 .67.04 1 .12L33.27 23.9a5.646 5.646 0 01-4.22 1.91c-1.62 0-3.15-.7-4.22-1.91L7.4 4.12c.32-.07.65-.12 1-.12h41.31zm0-4.01H8.39C3.77-.01 0 3.75 0 8.37v28.86c0 4.62 3.76 8.39 8.39 8.39H49.7c4.62 0 8.39-3.76 8.39-8.39V8.37c0-4.62-3.76-8.38-8.39-8.38z"></path>
         </svg>
-        <p className="hidden sm:block">lesupoort24@gmail.com</p>
+        <p className="hidden sm:block">contact@lesupport24.com</p>
       </a>
 
       <a
-        href="https://wa.me/9055376498"
-        target="_blank"
+        // href="https://wa.me/0184672092"
+        href="#"
+        // target="_blank"
         id="phone"
         className="flex space-x-2"
       >
@@ -52,7 +53,7 @@ export default function TopBar() {
             ></path>
           </g>
         </svg>
-        <p className="hidden sm:block">+905358319555</p>
+        <p className="hidden sm:block">0184672092</p>
       </a>
     </div>
   );
