@@ -144,7 +144,7 @@ export default function NavBar() {
                 </g>
               </svg>
             </a>
-            <a href="https://www.facebook.com/supoort24" target="_blank">
+            {/* <a href="https://www.facebook.com/supoort24" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -157,7 +157,7 @@ export default function NavBar() {
                   d="M12 .05c-6.629 0-12 5.372-12 12 0 5.942 4.328 10.868 10 11.821v-9.316H7.105v-3.356H10V8.73c0-2.87 1.75-4.433 4.309-4.433 1.226 0 2.28.094 2.586.133v2.996l-1.774.004c-1.394 0-1.66.66-1.66 1.629v2.14h3.32l-.433 3.352H13.46v9.398C19.398 23.227 24 18.18 24 12.047 24 5.422 18.629.05 12 .05zm0 0"
                 ></path>
               </svg>
-            </a>
+            </a> */}
             {/* <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ export default function NavBar() {
                 </g>
               </svg>
             </a> */}
-            <a href="https://twitter.com/lesupport1" target="_blank">
+            {/* <a href="https://twitter.com/lesupport1" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -183,7 +183,7 @@ export default function NavBar() {
                   d="M24 4.559c-.89.39-1.844.652-2.836.777a4.886 4.886 0 002.164-2.719c-.95.567-2 .965-3.117 1.192a4.918 4.918 0 00-8.512 3.363c0 .39.031.766.114 1.121-4.09-.2-7.711-2.16-10.141-5.145a4.93 4.93 0 00-.676 2.485c0 1.707.879 3.215 2.188 4.09A4.88 4.88 0 01.96 9.117v.055a4.938 4.938 0 003.941 4.832c-.402.11-.836.164-1.289.164a4.35 4.35 0 01-.933-.086c.636 1.95 2.449 3.383 4.597 3.43a9.89 9.89 0 01-6.101 2.097c-.403 0-.79-.02-1.176-.066a13.842 13.842 0 007.547 2.207c9.055 0 14.004-7.5 14.004-14 0-.219-.008-.43-.016-.637A9.768 9.768 0 0024 4.56zm0 0"
                 ></path>
               </svg>
-            </a>
+            </a> */}
             {/* <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
