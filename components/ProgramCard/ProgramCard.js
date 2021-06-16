@@ -19,15 +19,15 @@ export default function ProgramCard(props) {
           })}
         </ul>
       </div>
-      <div className="text-gray-700 my-5 text-2xl">
+      {/* <div className="text-gray-700 my-5 text-2xl">
         Price:{" "}
         <span className="font-extrabold text-gray-700">{props.price} TL</span>
-      </div>
+      </div> */}
       <button
         className="px-6 py-3 bg-blue-600 text-white"
-        onClick={() => {
-          window.location.href = `/checkout/${props.link}`;
-        }}
+        // onClick={() => {
+        //   window.location.href = `/checkout/${props.link}`;
+        // }}
       >
         BUY NOW
       </button>
